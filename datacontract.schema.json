@@ -262,6 +262,34 @@
               "path",
               "format"
             ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "spark"
+                ],
+                "description": "The type of the data product technology that implements the data contract."
+              },
+              "location": {
+                "type": "string",
+                "format": "uri",
+                "description": "An optional string describing the server. Must be in the form of a URL."
+              },
+              "format": {
+                "type": "string",
+                "description": "The format of the file(s)",
+                "examples": ["json", "parquet", "csv"]
+              }
+            },
+            "additionalProperties": true,
+            "required": [
+              "type",
+              "location",
+              "format"
+            ]
           }
 
         ]
